@@ -10,7 +10,7 @@ import os
 chrome_options = webdriver.ChromeOptions()
 # chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 
-driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome()
 print("Браузер успешно открыт")
 
 from flask import Flask, request, jsonify
