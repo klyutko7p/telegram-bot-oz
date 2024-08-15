@@ -29,8 +29,8 @@ def handle_post():
     driver.get(url)
 
     try:
-        price_element = driver.find_elements(By.CLASS_NAME, "m6n_27")[0].text
-        title_element = driver.find_elements(By.CLASS_NAME, "m2o_27")[0].text
+        price_element = driver.find_elements(By.CLASS_NAME, "m6n_27")[1].text
+        title_element = driver.find_elements(By.CLASS_NAME, "m2o_27")[1].text
         price = price_element
         title = title_element
 
