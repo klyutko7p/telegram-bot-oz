@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 
 chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument("--headless")
+# chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 # chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
@@ -29,8 +29,8 @@ def handle_post():
     driver.get(url)
 
     try:
-        price_element = driver.find_elements(By.CLASS_NAME, "m6n_27")[1].text
-        title_element = driver.find_elements(By.CLASS_NAME, "m2o_27")[1].text
+        price_element = driver.find_elements(By.CLASS_NAME, "m6n_27")[0].text
+        title_element = driver.find_elements(By.CLASS_NAME, "m2o_27")[0].text
         price = price_element
         title = title_element
 
