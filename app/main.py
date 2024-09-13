@@ -30,7 +30,7 @@ def handle_post():
     driver.get(url)
     time.sleep(5)
     jsonData = driver.find_element(By.TAG_NAME, "body").text
-    jsonDataReturn = json.loads(jsonData)["seo"]["script"][0]['innerHTML'])
+    jsonDataReturn = json.loads(jsonData)["seo"]["script"][0]['innerHTML']
 
     response_data = {'status': 'success', 'message': f'{jsonDataReturn}'}
     return jsonify(response_data)
