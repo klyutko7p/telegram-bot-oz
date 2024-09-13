@@ -30,8 +30,8 @@ driver = init_webdriver()
 def handle_post():
     url = request.json['url']
     print(url)
-    driver.implicitly_wait(10)
     driver.get(url)
+    time.sleep(8)
     jsonData = driver.find_element(By.TAG_NAME, "body").text
 
     response_data = {'status': 'success', 'message': f'{jsonData}'}
