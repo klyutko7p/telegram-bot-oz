@@ -12,7 +12,9 @@ import json
 import os
 
 options = Options()
-options.add_argument("--headless=new")
+options.addArguments("--headless");
+options.addArguments("--disable-gpu");
+options.addArguments("--no-sandbox");
 
 def init_webdriver():
     driver = webdriver.Chrome(options=options)
