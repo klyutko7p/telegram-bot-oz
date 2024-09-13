@@ -31,7 +31,7 @@ def handle_post():
     url = request.json['url']
     print(url)
     driver.get(url)
-    time.sleep(8)
+    time.sleep(10)
     jsonData = driver.find_element(By.TAG_NAME, "body").text
 
     response_data = {'status': 'success', 'message': f'{jsonData}'}
