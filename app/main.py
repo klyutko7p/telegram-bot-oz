@@ -37,5 +37,3 @@ def handle_post():
 
     response_data = {'status': 'success', 'message': f'{jsonDataReturn}'}
     return jsonify(response_data)
-
-driver.quit()
