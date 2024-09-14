@@ -33,7 +33,7 @@ def handle_post():
     print(url)
     driver.get(url)
     print(driver.page_source)
-    time.sleep(8)
+    time.sleep(5)
     print(driver.page_source)
     jsonData = driver.find_element(By.TAG_NAME, "body").text
 
